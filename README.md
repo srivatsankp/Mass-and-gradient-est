@@ -22,3 +22,9 @@ v1 : Initial build.<br />
 - Uses Recursive Least Squares method with forgetting.
 - Forgetting Factors used as 0.9 and 0.6.
 - Results : Mass does not converge very well, leading to gradient estimate going haywire.
+
+v2 : Added optimizations. <br />
+- Added Filtering for Grade information from the input excel.
+- Tuned lambda to 1,0.95.
+- Issues : Mass converges to under 5kg but gradient sees this error in err(tantheta) ~-0.16. Positive Gradient being offset to negative but profile of gradient change remains identical.
+- Added Gradient Error and Mass Error Calculations.

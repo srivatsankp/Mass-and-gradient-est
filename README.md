@@ -6,6 +6,7 @@ Vehicle Details :<br />
 - mass = 285kg (incl rider and vehicle)
 - Friction Coeff(L0/m) = 0.169, Friction angle = atan(0.19) = 9.648deg
 - L2 = 0.0232
+Reference : https://websites.umich.edu/~annastef/papers_Long_ctrl/JournalPaperMassGrade_Final.pdf
 
 ######### Vehicle Data Generator<br />
 Vehicle power considered to be flat 4.5kW with peak torque of 23N (EV).<br />
@@ -28,3 +29,10 @@ v2 : Added optimizations. <br />
 - Tuned lambda to 1,0.95.
 - Issues : Mass converges to under 5kg but gradient sees this error in err(tantheta) ~-0.16. Positive Gradient being offset to negative but profile of gradient change remains identical.
 - Added Gradient Error and Mass Error Calculations.
+
+v3 : Changed RLS to recursive mode <br />
+- Changed to Initial-Estimate plus update law method.
+- Changed forgetting factor to 1.2 and added a filter for velocity. Note: filt_damp=0 needs to be initialized.
+- Current implementation gives maximum filtered acceleration error of 0.02. As shown in fig below:
+[Maximum error in filtered acceleration](screenshots/eqn_error.png)
+- Changed vehicle data generator from 100s to 300s. grade_def.xlsx has been updated to reflect the same.

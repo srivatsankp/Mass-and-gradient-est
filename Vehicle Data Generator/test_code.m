@@ -1,11 +1,15 @@
+clear;
+clc;
+close all;
+
 %% Init Variables
 power_rated = 4500;
 time_step = 0.01;
-time_total = 100;
+time_total = 300;
 param = zeros(time_total/time_step,3);
 %% Generate gradient curve
 
-for i = 1:size(param)
+for i = 1:size(param,1)
     if i == 1
         param(i,:) = 0;
     else

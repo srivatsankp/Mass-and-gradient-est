@@ -34,5 +34,5 @@ v3 : Changed RLS to recursive mode <br />
 - Changed to Initial-Estimate plus update law method.
 - Changed forgetting factor to 1.2 and added a filter for velocity. Note: filt_damp=0 needs to be initialized.
 - Current implementation gives maximum filtered acceleration error of 0.02. As shown in fig below:
-[Maximum error in filtered acceleration](screenshots/eqn_error.png)
+![Maximum error in filtered acceleration](screenshots/eqn_error.png)
 - Changed vehicle data generator from 100s to 300s. grade_def.xlsx has been updated to reflect the same.
